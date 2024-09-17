@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Website - Anu</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <a class="navbar-brand" href="#">Anusuya U</a>
+            <ul class="navbar-nav">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skill">Skill</a></li>
+                <li><a href="#project">Project</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#resume">Resume</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Main Banner -->
+    <section class="hero" id="home">
+        <div class="hero-content" style="color:black;  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);border-radius: 10px; padding: 20px;">
+            <h2>Hi, it's me Anu</h2>
+            <p>Welcome to My Portfolio: Exploring My Creative Journey</p>
+        </div>
+    </section>
+    
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h1>About Me</h1>
+            <p>Hello Everyone! I am Anusuya, a driven and adaptable professional with a Master of Computer Applications (MCA) degree, graduating in 2020. My academic background, coupled with hands-on experience from a Python Full Stack Internship, has equipped me with a strong technical foundation.</p>
+            <p>I am a quick learner, constantly seeking new knowledge and skills to stay ahead in the ever-evolving tech landscape. One of my core principles is maintaining a positive and optimistic mindset. I believe that a positive attitude is essential for personal growth and fostering a productive environment.</p>
+            <p>I am passionate about leveraging my technical skills and personal attributes to contribute effectively to innovative projects and drive continuous growth. My self-motivation and flexibility enable me to tackle challenges with enthusiasm and resilience, while my ability to work well in teams ensures a collaborative and positive work environment.</p>
+        </div>
+    </section>
+    
+    <!-- Skill Section -->
+    <section class="skills" id="skill">
+        <div class="container">
+            <h2 style="text-align: center;">My Skills</h2>
+            <div class="skill">
+                <b>HTML</b>
+                <div class="progress-bar" style="width: 100%; height: 10px;"></div>
+            </div>
+            <div class="skill">
+                <b>CSS</b>
+                <div class="progress-bar" style="width: 100%; height: 10px;"></div>
+            </div>
+            
+            <div class="skill">
+                <b>JavaScript</b>
+                <div class="progress-bar" style="width: 50%; height: 10px;"></div>
+            </div>
+            <div class="skill">
+                <b>Python</b>
+                <div class="progress-bar" style="width: 90%; height: 10px;"></div>
+            </div>
+            <h2>Frameworks</h2>
+            <div class="skill"></div>
+                <b>Flask</b>
+                <div class="progress-bar" style="width: 70%;height: 10px;"></div>
+            
+            <div class="skill"></div>
+                <b>Django</b>
+                <div class="progress-bar" style="width: 70%; height: 10px;"></div>
+            <div class="skill"></div>
+                <b>MySQL</b>
+                <div class="progress-bar" style="width: 80%; height: 10px;"></div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Project Section -->
+    <section class="projects" id="project">
+        <div class="container">
+            <h1 style="text-align: center;">My Projects</h1>
+            <div class="project-card">
+                <img src="{% static 'image/task.png' %}"  style="width: 30%; height: 30%;">
+                <div class="card-content">
+                    <h4>Task Management System</h4>
+                    <p>Developed secure user registration and login systems with advanced validation, task management features, real-time CRUD operations, and user-friendly forms using Django, Python, HTML, and CSS.</p>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="{% static 'image/flas.png' %}" style="width: 30%; height: 30%;">
+                <div class="card-content">
+                    <h4>E-commerce Management System                    </h4>
+                    <p>Developed a secure login system with password hashing, comprehensive product management, optimized sales tracking tools, and automated e-mail notifications using Flask, MySQL, and Flask-Mail.</p>
+                    
+                </div>
+            </div>
+            
+            </div>
+        </div>
+    </section>
+    
+ <section class="resume" id="resume">
+    <div class="container">
+        <h1 style="text-align: center;">Resume</h1>
+        <img id="myImg" src="{% static 'image/Resuma-AnusuyaU.jpg' %}" alt="resume" style="width:100%;max-width:300px">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+    </div>
+</section>
+
+<script>
+    var modal = document.getElementById("myModal");
+    var img = document.getElementById("myImg");
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+      captionText.innerHTML = this.alt;
+    }
+
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+</script>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h1 style="text-align: center;">Contact Me</h1>
+
+            <body>
+                <div class="card-container">
+                    <div class="round-card">
+                        <div class="container">
+                            <h4><b>Address</b></h4> 
+                            <p>Madurai, TamilNadu</p> 
+                        </div>
+                    </div>
+            
+                    <div class="round-card">
+                        <div class="container">
+                            <h4><b>Phone Number</b></h4> 
+                            <p>(+91) 82202 13206 </p> 
+                        </div>
+                    </div>
+            
+                    <div class="round-card">
+                        <div class="container">
+                            <h4><b>Email</b></h4> 
+                            <p>uanusuya.97@email.com</p> 
+                        </div>
+                    </div>
+                </div>
+               
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="social-icons">
+                
+                <a href="https://www.linkedin.com/in/anusuya-u-b4b3ba115?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+            </div>
+            <p>&copy; 2023 Anusuya U. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

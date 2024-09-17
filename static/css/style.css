@@ -1,0 +1,235 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding-top: 60px; /* Adjust based on navbar height */
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 10px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Ensure it stays above other content */
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-brand {
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-nav {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-nav li {
+    margin-left: 20px;
+}
+
+.navbar-nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.navbar-nav a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    box-shadow: inset;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.about, .skills, .projects, .resume, .contact {
+    padding: 50px 0;
+}
+
+.about p {
+    line-height: 1.6;
+}
+
+.skill {
+    margin-bottom: 15px;
+}
+
+.skill b {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.progress-bar {
+    background-color: #4caf50;
+    height: 5px;
+    border-radius: 3px;
+}
+
+.project-card {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.project-card img {
+    width: 100px;
+    height: 100px;
+    margin-right: 15px;
+}
+
+.card-content {
+    flex: 1;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background-color: #45a049;
+}
+
+.contact-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card-container {
+    display: flex;
+    gap: 80px; /* Space between cards */
+    margin-left: 100px;
+}
+
+.round-card {
+    width: 250px;         /* Adjust width as needed */
+    height: 220px;        /* Adjust height as needed */
+    border-radius: 12%;   /* This makes the card round */
+    background-color: #1d5d13; /* Dark green background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 12px;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+    color: white; /* Text color */
+}
+
+.container h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.2em;
+}
+
+.container p {
+    margin: 0;
+    font-size: 1em;
+}
+.footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.footer .social-icons {
+    margin-bottom: 10px;
+}
+
+.footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.footer .social-icons a:hover {
+    text-decoration: underline;
+}
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 90%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
